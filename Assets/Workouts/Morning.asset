@@ -15,5 +15,5 @@ MonoBehaviour:
   workoutName: Morning Routine
   exercises:
   - {fileID: 11400000, guid: d6be707b615e19b4bb4f0572db5f537e, type: 2}
-  - {fileID: 11400000, guid: 2dfbec9f752ef3f42ad4cfd90ac8b3c1, type: 2}
-  - {fileID: 11400000, guid: c2a8f6fbcc88c3e4f8daba30812ddb52, type: 2}
+  - {fileID: 11400000, guid: 05c666b6e5f2fb64c85a7571e02bcaf9, type: 2}
+  - {fileID: 11400000, guid: d6be707b615e19b4bb4f0572db5f537e, type: 2}

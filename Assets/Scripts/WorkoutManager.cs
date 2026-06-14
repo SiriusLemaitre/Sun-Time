@@ -4,13 +4,15 @@ using TMPro;
 
 public class WorkoutManager : MonoBehaviour
 {
+    public WorkoutInstance defaultWorkout;
+
     [Header ("Workout Related")]
     public bool playing;
     public float globalTimer = 0f;
-    public float exerciceTimer = 0f;
+    public float exerciseTimer = 0f;
     public WorkoutInstance currentWorkout;
     public Exercise currentExercise;
-    private int exercicesCount;
+    private int exercisesCount;
     private int nextExerciseIndex;
 
     [Header ("Sounds")]
@@ -19,7 +21,7 @@ public class WorkoutManager : MonoBehaviour
     public AudioClip resetClip;
     public AudioClip nextExerciseClip;
     public AudioClip startNewWorkoutClip;
-    public AudioClip skipExerciceClip;
+    public AudioClip skipExerciseClip;
 
     [Header ("UI")]
     public TextMeshProUGUI globalTimerText;
@@ -31,10 +33,10 @@ public class WorkoutManager : MonoBehaviour
     {
         currentWorkout = workout;
         globalTimer = 0;
-        exercicesCount = workout.exercises.Length;
+        exercisesCount = workout.exercises.Length;
         nextExerciseIndex = 1;
 
-        if (workout != null && exercicesCount > 0)
+        if (workout != null && exercisesCount > 0)
         {
             currentExercise = workout.exercises[0];
         }
@@ -45,13 +47,13 @@ public class WorkoutManager : MonoBehaviour
         if (playing == true && currentWorkout != null)
         {
             globalTimer += Time.deltaTime;
-            exerciceTimer += Time.deltaTime;
+            exerciseTimer += Time.deltaTime;
 
-            if (exerciceTimer >= currentExercise.duration)
+            if (exerciseTimer >= currentExercise.duration)
             {
-                exerciceTimer = 0;
+                exerciseTimer = 0;
 
-                if (nextExerciseIndex >= exercicesCount)
+                if (nextExerciseIndex >= exercisesCount)
                 {
                     Reset();
                 }
@@ -77,7 +79,31 @@ public class WorkoutManager : MonoBehaviour
 
     public void Play()
     {
+        if (currentWorkout == null) StartWorkout(defaultWorkout);
         playing = true;
+    }
+
+    public void SkipBack()
+    {
+        if (currentWorkout == null) return;
+        if (exerciseTimer >= 1 || nextExerciseIndex <= 1) exerciseTimer = 0;
+
+        exerciseTimer = 0;
+        nextExerciseIndex--;
+        currentExercise = currentWorkout.exercises[nextExerciseIndex-1];
+    }
+
+    public void SkipForth()
+    {
+        if (currentWorkout == null) return;
+        if (nextExerciseIndex >= exercisesCount)
+        {
+            Reset();
+            return;
+        }
+
+        exerciseTimer = 0;
+        currentExercise = currentWorkout.exercises[nextExerciseIndex++];
     }
 
     public void Reset()
@@ -86,7 +112,7 @@ public class WorkoutManager : MonoBehaviour
         currentExercise = null;
         globalTimer = 0;
         playing = false;
-        exercicesCount = 0;
+        exercisesCount = 0;
     }
 
 

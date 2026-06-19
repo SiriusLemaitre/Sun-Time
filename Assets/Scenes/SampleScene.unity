@@ -1594,12 +1594,12 @@ MonoBehaviour:
   exerciseTimer: 0
   currentWorkout: {fileID: 0}
   currentExercise: {fileID: 0}
-  resumeClip: {fileID: 0}
-  pauseClip: {fileID: 0}
-  resetClip: {fileID: 0}
-  nextExerciseClip: {fileID: 0}
-  startNewWorkoutClip: {fileID: 0}
-  skipExerciseClip: {fileID: 0}
+  resumeClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
+  pauseClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
+  resetClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
+  nextExerciseClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
+  startNewWorkoutClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
+  skipExerciseClip: {fileID: 8300000, guid: 9c6ddcddef8b39b43bc5a151b8df841f, type: 3}
   globalTimerText: {fileID: 1690928914}
   exerciseTimerText: {fileID: 638506042}
   exerciseNameText: {fileID: 52370147}

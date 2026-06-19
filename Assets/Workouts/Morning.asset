@@ -14,6 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorkoutInstance
   workoutName: Morning Routine
   exercises:
-  - {fileID: 11400000, guid: d6be707b615e19b4bb4f0572db5f537e, type: 2}
+  - {fileID: 11400000, guid: 87419b3004c13a440bac95d04b1eb091, type: 2}
+  - {fileID: 11400000, guid: 4dfba3b9fa46cdc4fbe63b3ba65fe8a7, type: 2}
+  - {fileID: 11400000, guid: 3c955030a395c534abc33a97f404d2d5, type: 2}
   - {fileID: 11400000, guid: 05c666b6e5f2fb64c85a7571e02bcaf9, type: 2}
+  - {fileID: 11400000, guid: 6747be558a2151b4fb795c5c9df932c8, type: 2}
   - {fileID: 11400000, guid: d6be707b615e19b4bb4f0572db5f537e, type: 2}
+  - {fileID: 11400000, guid: 7a42882e665eb334e96f47ef814ddd87, type: 2}
+  - {fileID: 11400000, guid: d6be707b615e19b4bb4f0572db5f537e, type: 2}
+  - {fileID: 11400000, guid: 112a5f61f4dc7e24aa8eb682cb7d0a02, type: 2}
+  - {fileID: 11400000, guid: 112a5f61f4dc7e24aa8eb682cb7d0a02, type: 2}
+  - {fileID: 11400000, guid: 4dfba3b9fa46cdc4fbe63b3ba65fe8a7, type: 2}
+  - {fileID: 11400000, guid: 115029164ca90814abc90b4be139faf9, type: 2}
+  - {fileID: 11400000, guid: 05c666b6e5f2fb64c85a7571e02bcaf9, type: 2}
+  - {fileID: 11400000, guid: 4a52bc910fdf0e4458aad7bfaf45e7ab, type: 2}
+  - {fileID: 11400000, guid: 4dfba3b9fa46cdc4fbe63b3ba65fe8a7, type: 2}
+  - {fileID: 11400000, guid: fef26308a8863604fb34ef168c974cc2, type: 2}
